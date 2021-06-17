@@ -513,6 +513,14 @@ uint8_t* BLEAdvertisedDevice::getPayload() {
 	return m_payload;
 }
 
+esp_ble_evt_type_t BLEAdvertisedDevice::getEvtType() {
+	return m_evtType;
+}
+
+void BLEAdvertisedDevice::setEvtType(esp_ble_evt_type_t type) {
+	m_evtType = type;
+}
+
 esp_ble_addr_type_t BLEAdvertisedDevice::getAddressType() {
 	return m_addressType;
 }

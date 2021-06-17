@@ -41,6 +41,8 @@ public:
 	int8_t      getTXPower();
 	uint8_t* 	getPayload();
 	size_t		getPayloadLength();
+	esp_ble_evt_type_t getEvtType();
+	void setEvtType(esp_ble_evt_type_t type);
 	esp_ble_addr_type_t getAddressType();
 	void setAddressType(esp_ble_addr_type_t type);
 
@@ -97,6 +99,7 @@ private:
 	BLEUUID     m_serviceDataUUID;
 	uint8_t*	m_payload;
 	size_t		m_payloadLength = 0;
+	esp_ble_evt_type_t m_evtType;
 	esp_ble_addr_type_t m_addressType;
 };
 

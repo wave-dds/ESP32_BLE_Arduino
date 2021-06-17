@@ -117,6 +117,7 @@ void BLEScan::handleGAPEvent(
 					advertisedDevice->setRSSI(param->scan_rst.rssi);
 					advertisedDevice->setAdFlag(param->scan_rst.flag);
 					advertisedDevice->parseAdvertisement((uint8_t*)param->scan_rst.ble_adv, param->scan_rst.adv_data_len + param->scan_rst.scan_rsp_len);
+					advertisedDevice->setEvtType(param->scan_rst.ble_evt_type);
 					advertisedDevice->setScan(this);
 					advertisedDevice->setAddressType(param->scan_rst.ble_addr_type);
 
